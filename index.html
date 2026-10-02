@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasgor &amp; Seafood | Nasi Goreng &amp; Seafood</title>
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link Ke Berkas CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="brand-name">Nasgor <span>Mas Dado</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#keunggulan">Keunggulan</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#testimoni">Testimoni</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+        <button class="cart-trigger" id="cart-open" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
+            <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+            <span>Pesan</span>
+            <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Nasgor &amp; Seafood</h1>
+        <p class="tagline">"Dahar Pedo Ala Resto"</p>
+        <p class="desc">Nikmati kelezatan sajian nasi goreng rempah pilihan berkelas restoran bintang lima dengan harga ramah UMKM!</p>
+        <a href="#menu" class="btn"><i class="fas fa-utensils"></i> Lihat Menu & Pesan</a>
+    </section>
+
+    <!-- Section Keunggulan -->
+    <section class="features" id="keunggulan">
+        <div class="feature-card">
+            <i class="fas fa-crown"></i>
+            <h3>Cita Rasa Resto</h3>
+            <p>Racikan bumbu rempah pilihan dengan teknik masak khusus beraroma smoky khas restoran.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-leaf"></i>
+            <h3>Bahan Segar</h3>
+            <p>Menggunakan bahan baku dan sayuran pilihan yang segar setiap harinya.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-wallet"></i>
+            <h3>Harga Terjangkau</h3>
+            <p>Kualitas rasa mewah bintang lima, dengan harga ramah di kantong masyarakat.</p>
+        </div>
+    </section>
+
+    <!-- Section Katalog Menu -->
+    <section class="menu-section" id="menu">
+        <h2 class="section-title menu-brand-title">
+            <img src="WhatsApp%20Image%202026-09-30%20at%2010.42.41.jpeg" alt="Logo Nasgor &amp; Seafood">
+        </h2>
+        <div class="menu-category-tabs" role="group" aria-label="Kategori menu">
+            <button class="menu-tab is-active" type="button" data-menu-category="nasi" aria-pressed="true">Menu Nasi Goreng</button>
+            <button class="menu-tab" type="button" data-menu-category="mie" aria-pressed="false">Menu Mie</button>
+            <button class="menu-tab" type="button" data-menu-category="sayur" aria-pressed="false">Menu Capcay Dan Tumisan</button>
+            <button class="menu-tab" type="button" data-menu-category="kwetiaw" aria-pressed="false">Menu Kwetiaw</button>
+        </div>
+        <div class="menu-grid">
+            <h3 class="menu-category-title promo-heading">Promo</h3>
+            <h3 class="menu-category-title budget-heading">Menu Murah</h3>
+            <h3 class="menu-category-title regular-heading">Menu Reguler</h3>
+            <h3 class="menu-category-title mie-heading">Menu Mie</h3>
+            <h3 class="menu-category-title capcay-promo-heading">Promo</h3>
+            <h3 class="menu-category-title capcay-regular-heading">Menu Reguler</h3>
+            <h3 class="menu-category-title kwetiaw-promo-heading">Promo</h3>
+            <h3 class="menu-category-title kwetiaw-regular-heading">Menu Reguler</h3>
+            <div class="menu-card is-promo">
+                <img src="Nasi%20Goreng%20Ati%20Ampela.png" alt="Nasi Goreng Ati Ampela" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Ati Ampela</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran ati dan ampela.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 28.000</span><del class="old-price">Rp 32.400</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Ati Ampela">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Ayam%20Lada%20Hitam.png" alt="Nasi Goreng Ayam Lada Hitam" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Ayam Lada Hitam</div>
+                    <div class="menu-desc">Nasi goreng khas Dado dengan topping ayam yang dilumuri saus lada hitam.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 33.000</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Ayam Lada Hitam">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Ayam.png" alt="Nasi Goreng Ayam" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Ayam</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran ayam.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 32.400</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Ayam">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-promo">
+                <img src="Nasi%20Goreng%20Biasa.png" alt="Nasi Goreng Biasa" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Biasa</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran telur dan sayur.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 22.000</span><del class="old-price">Rp 27.000</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Biasa">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-promo">
+                <img src="Nasi%20Goreng%20Chicken%20Katsu.png" alt="Nasi Goreng Chicken Katsu" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Chicken Katsu</div>
+                    <div class="menu-desc">Nasi goreng dengan topping dada ayam panir, disiram olesan saus asam pedas.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 32.000</span><del class="old-price">Rp 43.200</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Chicken Katsu">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Fish%20Ball.png" alt="Nasi Goreng Fish Ball" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Fish Ball</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran potongan bola ikan.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 39.600</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Fish Ball">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-budget">
+                <img src="Nasi%20Goreng%20Hongkong%20Ayam.png" alt="Nasi Goreng Hongkong Ayam" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Hongkong Ayam</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran berbagai sayuran dan daging ayam.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 26.500</span><del class="old-price">Rp 39.600</del><span class="menu-badge">Promo</span><span class="menu-badge budget-badge">Menu Murah</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Hongkong Ayam">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Hongkong%20Seafood.png" alt="Nasi Goreng Hongkong Seafood" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Hongkong Seafood</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran berbagai sayuran dan daging cumi segar.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 44.000</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Hongkong Seafood">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Ikan%20Kakap.png" alt="Nasi Goreng Ikan Kakap" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Ikan Kakap</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran potongan daging kakap.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 43.200</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Ikan Kakap">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Mawut%20Seafood.png" alt="Nasi Goreng Mawut Seafood" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Mawut Seafood</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran mi segar dan cumi segar.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 43.200</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Mawut Seafood">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-promo">
+                <img src="Nasi%20Goreng%20Sapi.png" alt="Nasi Goreng Sapi" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Sapi</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran daging sapi.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 32.000</span><del class="old-price">Rp 43.200</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Sapi">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Seafood.png" alt="Nasi Goreng Seafood" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Seafood</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran daging cumi segar.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 41.400</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Seafood">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-budget">
+                <img src="Nasi%20Goreng%20Sei%20Sapi%20Blackpaper.png" alt="Nasi Goreng Sei Sapi Blackpaper" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Sei Sapi Blackpaper</div>
+                    <div class="menu-desc">Nasi goreng dengan telur dan sayur, ditambah irisan daging sapi blackpepper yang dimasak dengan bumbu spesial khas Dado.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 33.500</span><del class="old-price">Rp 39.600</del><span class="menu-badge">Promo</span><span class="menu-badge budget-badge">Menu Murah</span><span class="menu-badge new-menu-badge">New Menu</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Sei Sapi Blackpaper">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Special%20Kumplit.png" alt="Nasi Goreng Special Kumplit" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Special Kumplit</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran ati, ampela, daging ayam, dan daging cumi segar.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 43.200</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Special Kumplit">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-promo">
+                <img src="Nasi%20Goreng%20Special.png" alt="Nasi Goreng Special" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Special</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran ati, ampela, dan daging ayam.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 36.000</span><del class="old-price">Rp 39.600</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Special">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-regular">
+                <img src="Nasi%20Goreng%20Yakimeshi.png" alt="Nasi Goreng Yakimeshi" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Nasi Goreng Yakimeshi</div>
+                    <div class="menu-desc">Nasi goreng dengan campuran paprika dan daging ayam.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 31.000</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Nasi Goreng Yakimeshi">Pesan</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-mie">
+                <img src="I%20Fu%20Mie%20Seafood.png" alt="I Fu Mie Seafood" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">I Fu Mie Seafood</div>
+                    <div class="menu-desc">Mi kering yang disiram dengan sayuran capcay dan daging cumi.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 39.000</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="I Fu Mie Seafood">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-mie">
+                <img src="Mie%20Goreng%20Ayam.png" alt="Mie Goreng Ayam" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Mie Goreng Ayam</div>
+                    <div class="menu-desc">Mi goreng dengan campuran telur, sayur, dan daging ayam.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 25.000</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Mie Goreng Ayam">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-mie">
+                <img src="Mie%20Kuah%20Spesial.png" alt="Mie Kuah Spesial" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Mie Kuah Spesial</div>
+                    <div class="menu-desc">Mi kuah khas Dado dengan campuran sayuran, daging ayam, dan ati ampela.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 32.000</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Mie Kuah Spesial">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-mie">
+                <img src="Mie%20Sechuan%20Seafood.png" alt="Mie Sechuan Seafood" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Mie Sechuan Seafood</div>
+                    <div class="menu-desc">Mi kuah asam pedas dengan campuran sayuran dan daging cumi.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 42.000</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Mie Sechuan Seafood">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-sayur is-sayur-promo">
+                <img src="Sapo%20Tahu%20Ayam.png" alt="Sapo Tahu Ayam" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Sapo Tahu Ayam</div>
+                    <div class="menu-desc">Tahu Jepang dan ayam yang disiram dengan saus tiram.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 29.000</span><del class="old-price">Rp 39.600</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Sapo Tahu Ayam">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-sayur is-sayur-promo">
+                <img src="Sapo%20Tahu%20Seafood.png" alt="Sapo Tahu Seafood" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Sapo Tahu Seafood</div>
+                    <div class="menu-desc">Tahu Jepang dan cumi yang disiram dengan saus tiram.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 32.000</span><del class="old-price">Rp 43.200</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Sapo Tahu Seafood">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-sayur is-sayur-regular">
+                <img src="Capcay%20Goreng%20Super%20Komplit.png" alt="Capcay Goreng Super Komplit" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Capcay Goreng Super Komplit</div>
+                    <div class="menu-desc">Capcay goreng dengan aneka sayuran, daging ayam, ati ampela, dan cumi segar.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 43.200</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Capcay Goreng Super Komplit">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-sayur is-sayur-regular">
+                <img src="Tumis%20Kangkung.png" alt="Tumis Kangkung" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Tumis Kangkung</div>
+                    <div class="menu-desc">Tumis kangkung dengan aroma garlic.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 39.600</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Tumis Kangkung">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-kwetiaw is-kwetiaw-regular">
+                <img src="Kwetiaw%20Goreng%20Seafood.png" alt="Kwetiaw Goreng Seafood" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Kwetiaw Goreng Seafood</div>
+                    <div class="menu-desc">Kwetiaw dengan campuran daging cumi segar.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 41.400</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Kwetiaw Goreng Seafood">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-kwetiaw is-kwetiaw-regular">
+                <img src="Kwetiaw%20Goreng%20Daging%20Sapi.png" alt="Kwetiaw Goreng Daging Sapi" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Kwetiaw Goreng Daging Sapi</div>
+                    <div class="menu-desc">Kwetiaw goreng dengan daging sapi segar.</div>
+                    <div class="menu-bottom">
+                        <span class="price">Rp 32.000</span>
+                        <button class="btn btn-sm btn-pesan" data-menu="Kwetiaw Goreng Daging Sapi">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-kwetiaw is-kwetiaw-promo">
+                <img src="Kwetiaw%20Goreng%20Biasa.png" alt="Kwetiaw Goreng Biasa" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Kwetiaw Goreng Biasa</div>
+                    <div class="menu-desc">Kwetiaw goreng dengan campuran telur dan sayur.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 21.000</span><del class="old-price">Rp 27.000</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Kwetiaw Goreng Biasa">Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card is-kwetiaw is-kwetiaw-promo">
+                <img src="Kwetiaw%20Goreng%20Ayam.png" alt="Kwetiaw Goreng Ayam" loading="lazy">
+                <div class="menu-details">
+                    <div class="menu-title">Kwetiaw Goreng Ayam</div>
+                    <div class="menu-desc">Kwetiaw goreng dengan daging ayam segar.</div>
+                    <div class="menu-bottom">
+                        <div class="price-group"><span class="price">Rp 26.000</span><del class="old-price">Rp 35.000</del><span class="menu-badge">Promo</span></div>
+                        <button class="btn btn-sm btn-pesan" data-menu="Kwetiaw Goreng Ayam">Tambah</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Testimoni -->
+    <section class="testimonials" id="testimoni">
+        <h2 class="section-title">Testimoni Pelanggan</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p>"Rasanya beneran pedo banget! Dagingnya banyak dan bumbunya pas serasa makan di resto mahal."</p>
+                <div class="client-name">- Aldi</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Chicken Katsu-nya renyah, porsinya bikin kenyang banget. Langganan tiap pulang kantor!"</p>
+                <div class="client-name">- Asep</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"Nasi Goreng Kambingnya juara! Nggak bau amis sama sekali dan rempahnya kerasa banget."</p>
+                <div class="client-name">- Sandi</div>
+            </div>
+        </div>
+    </section>
+
+    <dialog class="cart-dialog" id="cart-dialog" aria-labelledby="cart-title">
+        <div class="cart-header">
+            <h2 id="cart-title">Pesan</h2>
+            <button class="icon-button" id="cart-close" type="button" aria-label="Tutup pesanan">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-total-row">
+            <span>Total</span>
+            <strong id="cart-total">Rp0</strong>
+        </div>
+        <div class="buyer-name-field">
+            <label for="buyer-name">Nama pembeli</label>
+            <input id="buyer-name" name="buyer-name" type="text" autocomplete="name" maxlength="80" placeholder="Masukkan nama Anda" required>
+        </div>
+        <fieldset class="order-type-options">
+            <legend>Jenis Pesanan</legend>
+            <label><input type="radio" name="order-type" value="Makan di tempat" checked> Makan di tempat</label>
+            <label><input type="radio" name="order-type" value="Bungkus"> Bungkus</label>
+            <label><input type="radio" name="order-type" value="Pesan antar"> Pesan antar</label>
+        </fieldset>
+        <div class="delivery-address-field" id="delivery-address-field" hidden>
+            <label for="delivery-address">Alamat pengantaran</label>
+            <textarea id="delivery-address" name="delivery-address" rows="2" placeholder="Masukkan alamat lengkap"></textarea>
+        </div>
+        <div class="order-note-field">
+            <label for="order-note">Catatan pesanan (opsional)</label>
+            <textarea id="order-note" name="order-note" rows="2" maxlength="300" placeholder="Contoh: tidak pedas, sambal dipisah"></textarea>
+        </div>
+        <fieldset class="payment-options">
+            <legend>Metode Pembayaran</legend>
+            <label><input type="radio" name="payment-method" value="Cash (Bayar di Tempat)" checked> Cash (Bayar di Tempat)</label>
+            <label><input type="radio" name="payment-method" value="QRIS"> QRIS</label>
+        </fieldset>
+        <p class="order-status" id="order-status" role="status" aria-live="polite"></p>
+        <div class="cart-actions">
+            <button class="btn btn-whatsapp" id="cart-whatsapp" type="button" disabled><i class="fab fa-whatsapp" aria-hidden="true"></i> Pesan via WhatsApp</button>
+        </div>
+    </dialog>
+
+    <!-- Footer / Kontak -->
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-box">
+                <h3>Nasgor &amp; Seafood</h3>
+                <p>Warung nasi goreng populer bergaya Chinese food dan seafood khas kaki lima, dengan banyak cabang di wilayah Bandung dan Cimahi.</p>
+                <p class="rating" role="img" aria-label="Rating rata-rata 4,6 dari 5 bintang">
+                    <span class="rating-stars" aria-hidden="true"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star star-partial"></i></span>
+                    <span>4,6 / 5</span>
+                </p>
+            </div>
+            <div class="footer-box">
+                <h3>Jam Buka & Kisaran Harga</h3>
+                <p>Senin - Minggu: 10:00 - 23:00 WIB</p>
+                <p>Harga Rp22.000–Rp50.000 per porsi</p>
+            </div>
+            <div class="footer-box">
+                <h3>Lokasi & Kontak</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jl. Budi No.53, Sukaraja, Kec. Cicendo, Kota Cimahi, Jawa Barat 40535</p>
+                <p><i class="fab fa-whatsapp"></i> 0821-1242-1018</p>
+            </div>
+            <div class="footer-box">
+                <h3>Fasilitas</h3>
+                <p>🍽️ Dine-in — Makan di tempat</p>
+                <p>🥡 Take-out — Dibawa pulang</p>
+                <p>🛵 Pesan Antar — Diantar ke alamat pelanggan</p>
+            </div>
+        </div>
+        <div class="footer-map">
+            <iframe
+                title="Peta lokasi Nasgor &amp; Seafood"
+                src="https://www.google.com/maps?q=Jl.%20Budi%20No.53%2C%20Sukaraja%2C%20Kec.%20Cicendo%2C%20Kota%20Cimahi%2C%20Jawa%20Barat%2040535&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+            </iframe>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Jl.%20Budi%20No.53%2C%20Sukaraja%2C%20Kec.%20Cicendo%2C%20Kota%20Cimahi%2C%20Jawa%20Barat%2040535" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-location-dot" aria-hidden="true"></i> Buka di Google Maps
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nasgor &amp; Seafood. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link Ke Berkas JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
